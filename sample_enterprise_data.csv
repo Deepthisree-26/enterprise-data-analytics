@@ -1,0 +1,13 @@
+order_id,date,region,category,product,units_sold,revenue,profit_margin,customer_role
+ORD-2001,2024-01-05,North America,Cloud Services,Kubernetes Cluster Pro,12,60000.0,0.35,Enterprise
+ORD-2002,2024-01-12,Europe,AI Analytics,Predictive Model API,25,75000.0,0.42,Corporate
+ORD-2003,2024-01-18,Asia Pacific,Security,Zero Trust Access Gateway,40,120000.0,0.38,Enterprise
+ORD-2004,2024-01-25,North America,Data Storage,High-Throughput Lakehouse,18,54000.0,0.30,SMB
+ORD-2005,2024-02-02,Latin America,Cloud Services,Edge CDN Acceleration,30,45000.0,0.25,SMB
+ORD-2006,2024-02-09,Europe,Hardware Integration,IoT Edge Hub Gateway,55,165000.0,0.45,Enterprise
+ORD-2007,2024-02-16,Asia Pacific,AI Analytics,Autonomous Workflow Agent,70,210000.0,0.50,Enterprise
+ORD-2008,2024-02-23,North America,Security,Compliance & SIEM Monitor,35,105000.0,0.40,Corporate
+ORD-2009,2024-03-01,Europe,Cloud Services,Multi-Region Failover,22,88000.0,0.36,Enterprise
+ORD-2010,2024-03-08,Latin America,Data Storage,Cold Archive Vault,60,72000.0,0.28,SMB
+ORD-2011,2024-03-15,North America,AI Analytics,Executive BI Copilot,80,240000.0,0.48,Enterprise
+ORD-2012,2024-03-22,Asia Pacific,Security,Threat Detection Sensor,45,135000.0,0.41,Corporate

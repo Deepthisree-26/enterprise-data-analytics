@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom dark mode background colors */
+.bg-background { background-color: hsl(210, 30%, 10%); }
+.bg-surface { background-color: hsl(210, 30%, 12%); }
+.text-primary { color: hsl(210, 50%, 55%); }
+.text-secondary { color: hsl(210, 40%, 45%); }
