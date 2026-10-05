@@ -1,0 +1,11 @@
+Product ID,Product Name,Category,Region,Unit Cost,Unit Price,Supplier,Reorder Level
+PROD-1001,Enterprise Cloud Suite,Software,North America,120.00,350.00,Apex Cloud Labs,15
+PROD-1002,AI Analytics Platform,Software,Europe,180.00,499.00,Cognition Tech,10
+PROD-1003,Secure Gateway Pro,Hardware,Asia Pacific,85.00,199.00,Nexus Systems,20
+PROD-1004,Quantum DB Server,Hardware,North America,850.00,1850.00,Quantum Silicon,5
+PROD-1005,CyberShield Endpoint,Software,Latin America,45.00,120.00,CyberDefense Corp,25
+PROD-1006,IoT Sensor Gateway,Hardware,Europe,30.00,75.00,MicroCore Tech,30
+PROD-1007,Data Mesh Orchestrator,Software,North America,220.00,600.00,Apex Cloud Labs,12
+PROD-1008,Edge Processing Unit,Hardware,Asia Pacific,110.00,260.00,Nexus Systems,18
+PROD-1009,Unified Telemetry Agent,Software,Europe,65.00,160.00,Cognition Tech,22
+PROD-1010,High-Speed Optical Switch,Hardware,North America,320.00,780.00,Quantum Silicon,8

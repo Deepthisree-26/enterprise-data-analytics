@@ -1,0 +1,9 @@
+Campaign ID,Campaign Name,Channel,Start Date,End Date,Region,Target Customers,Leads,Conversions,Marketing Spend,Revenue Generated
+CMP-3001,Enterprise Cloud Q3 Blitz,Search,2026-07-01,2026-07-31,North America,45000,1250,145,18500.00,58000.00
+CMP-3002,European Security Expo Promo,Event,2026-07-15,2026-08-15,Europe,15000,480,62,12000.00,34000.00
+CMP-3003,AI Analytics Inbound Webinar,Email,2026-08-01,2026-08-31,Global,60000,2100,290,9500.00,72500.00
+CMP-3004,APAC Telecom Retargeting,Social,2026-08-10,2026-09-10,Asia Pacific,35000,820,78,14000.00,28500.00
+CMP-3005,Data Mesh Tech Whitepaper,Display,2026-08-20,2026-09-20,North America,50000,640,42,11000.00,19800.00
+CMP-3006,Global Enterprise Summit,Event,2026-09-01,2026-09-25,Europe,20000,950,135,25000.00,88000.00
+CMP-3007,Zero-Trust Cloud LeadGen,Search,2026-09-05,2026-09-30,North America,40000,1180,160,16500.00,64000.00
+CMP-3008,Latin America Channel Launch,Social,2026-09-10,2026-09-30,Latin America,25000,520,38,7500.00,14200.00

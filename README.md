@@ -6,13 +6,24 @@ An enterprise-grade full-stack Business Intelligence & Data Analytics platform b
 
 ## 🚀 Key Features
 
+- **Multi-Department Ingestion Center:**
+  - 7 Enterprise Functional Units: **Sales**, **Customers**, **Products**, **Inventory**, **Finance**, **Marketing**, and **HR**.
+  - Strict 7-Step Ingestion Wizard: Department selection, dataset type, schema inspection, file upload (.csv/.xlsx), automated validation (schema, types, duplicates, and foreign key integrity), preview with search/pagination, and database import.
+  - Ingestion audit history logging timestamps, row counts, and status.
 - **Multi-Role Workspaces (RBAC):**
-  - **👨‍💻 Data Analyst:** Upload and ingest sales datasets (.csv, .xlsx), explore live transaction ledger, and run interactive ML revenue simulations.
-  - **📊 Executive Manager:** Real-time financial scorecards, regional revenue distribution, forecast accuracy, PDF/Excel audit reports, and AI Executive Assistant.
-  - **🛡️ System Administrator:** Microservice health metrics, user account lifecycle management, and system governance controls.
-- **Predictive ML Telemetry:** Multivariate linear regression predicting revenue based on units sold and gross profit margin ($R^2 \approx 0.94$).
-- **AI Executive Copilot:** Natural language dataset querying, real-time telemetry analysis, and data-backed business growth recommendations.
-- **Reporting & Auditing:** Real-time PDF and Excel export generation for board presentations.
+  - **👨‍💻 Data Analyst:** Upload, validate, and preview department datasets, view Data Explorer ledger, and simulate predictive analytics.
+  - **📊 Executive Manager:** Executive Overview combining cross-department telemetry, dedicated department scorecards, multi-sheet board reports (PDF/Excel), and Executive AI Copilot.
+  - **🛡️ System Administrator:** Microservice health metrics, user account lifecycle governance, and full administrative access.
+- **Predictive ML Telemetry:**
+  - Sales Multivariate Linear Regression ($R^2 \approx 0.94$).
+  - Customer Churn Probability classification.
+  - Inventory Stockout & Run-rate buffer modeling.
+  - Marketing Omnichannel ROI and conversion funnel estimation.
+- **Cross-Department Intelligence & AI Executive Copilot:**
+  - Contextual natural language Q&A across all 7 uploaded department tables (top spenders, high-velocity low-stock items, regional underperformance, and top 5 business risks).
+- **Multi-Sheet Reporting Engine:**
+  - Board-ready PDF briefs and multi-sheet Excel workbooks dynamically populated based on active uploaded departments.
+
 
 ---
 
@@ -92,7 +103,14 @@ enterprise-data-analytics/
 │   │   ├── pages/       # Dashboard, Login, Signup & ManagerChat
 │   │   ├── services/    # Axios API service integrations
 │   │   └── styles/      # Tailwind & global CSS
-│   └── vite.config.ts   # Vite dev server & proxy configuration
+├── sample_data/         # Realistic multi-department test datasets
+│   ├── sales.csv
+│   ├── customers.csv
+│   ├── products.csv
+│   ├── inventory.csv
+│   ├── finance.csv
+│   ├── marketing.csv
+│   └── employees.csv
 └── package.json         # Workspace orchestration scripts
 ```
 

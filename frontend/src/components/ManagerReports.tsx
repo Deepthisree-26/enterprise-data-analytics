@@ -114,6 +114,19 @@ const ManagerReports: React.FC = () => {
           </button>
         </div>
       </div>
+
+      <div className="mt-4 pt-3.5 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+        <span className="text-slate-400">
+          Looking for department-specific reports (Sales, Customer Retention, Inventory Stock, Finance, Marketing, HR)?
+        </span>
+        <a
+          href="/reports"
+          className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center space-x-1 transition"
+        >
+          <span>Open Full Reporting Center</span>
+          <span>→</span>
+        </a>
+      </div>
     </div>
   );
 };

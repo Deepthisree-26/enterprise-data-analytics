@@ -1,0 +1,13 @@
+Date,Transaction Type,Category,Department,Description,Amount,Budget,Actual Amount,Region
+2026-08-01,Revenue,Cloud Subscriptions,Sales,Enterprise SaaS recurring contracts,185000.00,180000.00,185000.00,North America
+2026-08-05,Expense,Infrastructure,Engineering,Cloud datacenter hosting & clusters,42000.00,40000.00,42000.00,North America
+2026-08-10,Expense,Payroll,HR,Monthly engineering and leadership salaries,95000.00,95000.00,95000.00,Global
+2026-08-15,Revenue,Hardware Sales,Sales,Security gateways and servers shipped,72000.00,65000.00,72000.00,Europe
+2026-08-20,Expense,Marketing,Marketing,Paid search and targeted social campaigns,22000.00,25000.00,22000.00,North America
+2026-08-25,Expense,Office Facilities,Operations,HQ facilities and corporate utilities,12000.00,11000.00,12000.00,North America
+2026-09-01,Revenue,Cloud Subscriptions,Sales,Quarterly enterprise software renewals,210000.00,200000.00,210000.00,North America
+2026-09-04,Expense,Infrastructure,Engineering,Cross-region optical backbone bandwidth,38000.00,35000.00,38000.00,Europe
+2026-09-10,Expense,Payroll,HR,Monthly corporate salaries & benefits,98000.00,95000.00,98000.00,Global
+2026-09-15,Revenue,Professional Services,Services,Enterprise data migration consulting,48000.00,40000.00,48000.00,Asia Pacific
+2026-09-20,Expense,Marketing,Marketing,Q3 global summit sponsorship,31000.00,30000.00,31000.00,Europe
+2026-09-25,Expense,Legal & Compliance,Executive,SOC2 Type II and ISO audit certifications,18000.00,20000.00,18000.00,North America

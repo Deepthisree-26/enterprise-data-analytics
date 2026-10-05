@@ -1,0 +1,13 @@
+Employee ID,Employee Name,Department,Designation,Region,Joining Date,Salary,Employment Status,Performance Score,Attendance Percentage,Attrition Risk
+EMP-4001,Sarah Jenkins,Engineering,Principal Architect,North America,2021-03-15,165000.00,Active,4.8,98.5,Low
+EMP-4002,Marcus Vance,Sales,VP Enterprise Sales,North America,2020-08-01,175000.00,Active,4.6,96.0,Low
+EMP-4003,Elena Rostova,Engineering,Senior Cloud Engineer,Europe,2022-01-10,128000.00,Active,4.2,97.0,Low
+EMP-4004,David Chen,Product,Lead Product Manager,Asia Pacific,2022-06-20,142000.00,Active,4.5,95.0,Low
+EMP-4005,Amina Diallo,Marketing,Director of Demand Gen,Europe,2021-11-05,135000.00,Active,4.1,94.5,Medium
+EMP-4006,Carlos Mendez,Finance,Senior Financial Analyst,Latin America,2023-02-14,92000.00,Active,3.9,96.2,Low
+EMP-4007,James Wilson,Engineering,DevOps Specialist,North America,2023-04-18,115000.00,Active,3.8,91.0,High
+EMP-4008,Olivia Taylor,Human Resources,HR Business Partner,North America,2022-09-01,105000.00,Active,4.4,98.0,Low
+EMP-4009,Liam O'Connor,Customer Support,Director of Client Success,Europe,2021-05-12,120000.00,Active,4.3,95.5,Low
+EMP-4010,Siddharth Rao,Engineering,Staff Security Researcher,Asia Pacific,2022-10-15,155000.00,Active,4.7,99.0,Low
+EMP-4011,Chloe Dubois,Sales,Senior Account Executive,Europe,2023-07-01,118000.00,Active,3.6,89.5,High
+EMP-4012,Mateo Silva,Operations,Supply Chain Lead,Latin America,2022-12-01,98000.00,Active,4.0,96.5,Low

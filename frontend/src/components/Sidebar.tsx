@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { getUserRole } from '../utils/auth';
 
 const Sidebar: React.FC = () => {
-  const role = getUserRole();
+  const role = getUserRole() || 'Analyst';
 
   const getRoleLinks = () => {
     switch (role.toLowerCase()) {
@@ -11,153 +11,207 @@ const Sidebar: React.FC = () => {
         return [
           {
             to: '/dashboard',
-            label: 'Analyst Data Hub',
+            label: 'Dashboard',
+            badge: 'Home',
+            icon: '📊',
+          },
+          {
+            to: '/analyst/data-ingestion',
+            label: 'Data Ingestion',
             badge: 'Ingest',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-              </svg>
-            ),
+            icon: '📥',
           },
           {
-            to: '/dashboard#ml-simulator',
-            label: 'ML Simulator',
-            badge: 'Predict',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            ),
-          },
-          {
-            to: '/dashboard#data-grid',
-            label: 'Transaction Ledger',
+            to: '/data-explorer',
+            label: 'Data Explorer',
             badge: 'Audit',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            ),
+            icon: '🔍',
+          },
+          {
+            to: '/predictive-analytics',
+            label: 'Predictive Analytics',
+            badge: 'ML',
+            icon: '⚡',
           },
           {
             to: '/manager-chat',
-            label: 'Analyst AI Copilot',
-            badge: 'Copilot',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-            ),
+            label: 'AI Copilot',
+            badge: 'AI',
+            icon: '🤖',
           },
         ];
+
       case 'manager':
         return [
           {
-            to: '/dashboard',
-            label: 'Executive Scorecards',
-            badge: 'KPIs',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            ),
+            to: '/manager/executive',
+            label: 'Executive Overview',
+            badge: 'Board',
+            icon: '🏛️',
           },
           {
-            to: '/dashboard#manager-reports',
-            label: 'Audit Reports (PDF/Excel)',
-            badge: 'Export',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            ),
+            to: '/sales',
+            label: 'Sales',
+            badge: '',
+            icon: '💼',
           },
           {
-            to: '/dashboard#manager-charts',
-            label: 'Forecast & Market Share',
-            badge: 'Strategy',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-              </svg>
-            ),
+            to: '/customers',
+            label: 'Customers',
+            badge: '',
+            icon: '👥',
+          },
+          {
+            to: '/inventory',
+            label: 'Inventory',
+            badge: '',
+            icon: '🏭',
+          },
+          {
+            to: '/finance',
+            label: 'Finance',
+            badge: '',
+            icon: '💰',
+          },
+          {
+            to: '/marketing',
+            label: 'Marketing',
+            badge: '',
+            icon: '🎯',
+          },
+          {
+            to: '/hr',
+            label: 'HR',
+            badge: '',
+            icon: '👔',
+          },
+          {
+            to: '/predictive-analytics',
+            label: 'Predictive Analytics',
+            badge: 'ML',
+            icon: '⚡',
           },
           {
             to: '/manager-chat',
-            label: 'Executive AI Copilot',
-            badge: 'Executive',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            ),
+            label: 'AI Copilot',
+            badge: 'AI',
+            icon: '🤖',
+          },
+          {
+            to: '/reports',
+            label: 'Reports',
+            badge: 'Export',
+            icon: '📑',
           },
         ];
+
       case 'admin':
         return [
           {
-            to: '/dashboard',
-            label: 'System Operations',
-            badge: 'Health',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            ),
+            to: '/admin',
+            label: 'Overview',
+            badge: 'Admin',
+            icon: '📊',
           },
           {
-            to: '/dashboard#admin-controls',
-            label: 'User Access Governance',
-            badge: 'Accounts',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            ),
+            to: '/admin/users',
+            label: 'User Management',
+            badge: 'Users',
+            icon: '👥',
           },
           {
-            to: '/dashboard#data-grid',
-            label: 'Pipeline Data & Ledger',
-            badge: 'Database',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-              </svg>
-            ),
+            to: '/admin/access-control',
+            label: 'Access Control',
+            badge: 'RBAC',
+            icon: '🔐',
+          },
+          {
+            to: '/admin/departments',
+            label: 'Departments',
+            badge: '7 Units',
+            icon: '🏢',
+          },
+          {
+            to: '/admin/data-management',
+            label: 'Data Management',
+            badge: 'Registry',
+            icon: '📁',
+          },
+          {
+            to: '/admin/upload-history',
+            label: 'Upload History',
+            badge: 'Audit',
+            icon: '📤',
+          },
+          {
+            to: '/admin/data-quality',
+            label: 'Data Quality',
+            badge: 'QA',
+            icon: '✅',
+          },
+          {
+            to: '/admin/audit-logs',
+            label: 'Audit Logs',
+            badge: 'Trail',
+            icon: '🔍',
+          },
+          {
+            to: '/admin/activity',
+            label: 'Security Activity',
+            badge: 'Logins',
+            icon: '👤',
+          },
+          {
+            to: '/admin/system-health',
+            label: 'System Health',
+            badge: 'Live',
+            icon: '🖥️',
+          },
+          {
+            to: '/admin/alerts',
+            label: 'System Alerts',
+            badge: 'Alerts',
+            icon: '🚨',
+          },
+          {
+            to: '/admin/reports',
+            label: 'Admin Reports',
+            badge: 'PDF/XLS',
+            icon: '📑',
+          },
+          {
+            to: '/admin/settings',
+            label: 'System Settings',
+            badge: 'Config',
+            icon: '⚙️',
+          },
+          {
+            to: '/manager/executive',
+            label: 'Executive Overview',
+            badge: 'Manager',
+            icon: '🏛️',
+          },
+          {
+            to: '/analyst/data-ingestion',
+            label: 'Data Ingestion',
+            badge: 'Analyst',
+            icon: '📥',
           },
           {
             to: '/manager-chat',
-            label: 'System AI Copilot',
-            badge: 'Admin AI',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-            ),
+            label: 'AI Copilot',
+            badge: 'AI',
+            icon: '🤖',
           },
         ];
+
       default:
         return [
           {
             to: '/dashboard',
-            label: 'Telemetry & KPIs',
+            label: 'Dashboard',
             badge: '',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" />
-              </svg>
-            ),
-          },
-          {
-            to: '/manager-chat',
-            label: 'Executive AI Chat',
-            badge: '',
-            icon: (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-            ),
+            icon: '📊',
           },
         ];
     }
@@ -182,32 +236,30 @@ const Sidebar: React.FC = () => {
         </div>
       </div>
 
-      {/* Navigation Links */}
-      <div className="p-4 flex-1 space-y-1">
+      {/* Navigation Links with custom scrollbar */}
+      <div className="p-3 flex-1 space-y-1 overflow-y-auto">
         <div className="px-3 py-2 text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center justify-between">
-          <span>{role ? `${role} Tools` : 'Navigation'}</span>
-          {role && (
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-          )}
+          <span>{role ? `${role} Navigation` : 'Navigation'}</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
         </div>
         {links.map((l) => (
           <NavLink
             key={l.label}
             to={l.to}
             className={({ isActive }) =>
-              `flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 ${
+              `flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-150 ${
                 isActive
-                  ? 'bg-indigo-600/15 text-indigo-400 border border-indigo-500/30 shadow-sm shadow-indigo-500/10'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'bg-indigo-600/15 text-indigo-300 border border-indigo-500/30 shadow-sm shadow-indigo-500/10'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent'
               }`
             }
           >
-            <div className="flex items-center space-x-3">
-              <span className="shrink-0">{l.icon}</span>
-              <span>{l.label}</span>
+            <div className="flex items-center space-x-2.5 truncate">
+              <span className="text-base shrink-0">{l.icon}</span>
+              <span className="truncate">{l.label}</span>
             </div>
             {l.badge && (
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-800 text-slate-400 border border-slate-700">
+              <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-md bg-slate-800 text-slate-400 border border-slate-700 shrink-0">
                 {l.badge}
               </span>
             )}
@@ -221,7 +273,7 @@ const Sidebar: React.FC = () => {
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
           <div className="text-xs">
             <p className="font-semibold text-slate-200">System Online</p>
-            <p className="text-[11px] text-slate-500">FastAPI & BI Engine Active</p>
+            <p className="text-[11px] text-slate-500">Multi-Department Engine</p>
           </div>
         </div>
       </div>

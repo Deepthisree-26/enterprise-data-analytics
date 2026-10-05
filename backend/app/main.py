@@ -7,6 +7,8 @@ from app.database import Base, engine
 # Import all model modules so that tables are registered on Base.metadata
 from app.auth import models as auth_models
 from app.data import models as data_models
+from app.data import department_models as dept_models
+from app.data import admin_models
 from app.seed import seed_database
 
 # Ensure database tables exist and default users are ready (no demo data)
@@ -17,9 +19,9 @@ except Exception as e:
     print(f"Warning: Database user check encountered: {e}")
 
 from app.auth.routes import router as auth_router
-from app.api import upload, predict, ai_chat, reports, kpis, data_records, admin
+from app.api import upload, predict, ai_chat, reports, kpis, data_records, admin, ingestion_routes, analytics_routes
 
-app = FastAPI(title="Enterprise Data Analytics & BI Platform", version="0.1.0")
+app = FastAPI(title="Enterprise Data Analytics & BI Platform", version="0.2.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -37,6 +39,8 @@ app.add_middleware(
 
 # Include routers
 app.include_router(auth_router, prefix="/api/auth", tags=["auth"])
+app.include_router(ingestion_routes.router, prefix="/api", tags=["ingestion"])
+app.include_router(analytics_routes.router, prefix="/api", tags=["analytics"])
 app.include_router(upload.router, prefix="/api", tags=["upload"])
 app.include_router(predict.router, prefix="/api", tags=["predict"])
 app.include_router(ai_chat.router, prefix="/api", tags=["ai-chat"])

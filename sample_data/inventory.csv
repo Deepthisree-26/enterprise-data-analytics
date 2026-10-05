@@ -1,0 +1,11 @@
+Product ID,Product Name,Category,Warehouse,Stock Quantity,Reorder Level,Unit Cost,Stock Status,Last Updated
+PROD-1001,Enterprise Cloud Suite,Software,Central-US,12,15,120.00,Low Stock,2026-09-28
+PROD-1002,AI Analytics Platform,Software,Europe-West,38,10,180.00,In Stock,2026-09-27
+PROD-1003,Secure Gateway Pro,Hardware,APAC-East,8,20,85.00,Critical,2026-09-26
+PROD-1004,Quantum DB Server,Hardware,Central-US,3,5,850.00,Low Stock,2026-09-28
+PROD-1005,CyberShield Endpoint,Software,LATAM-South,65,25,45.00,In Stock,2026-09-25
+PROD-1006,IoT Sensor Gateway,Hardware,Europe-West,0,30,30.00,Out of Stock,2026-09-20
+PROD-1007,Data Mesh Orchestrator,Software,Central-US,7,12,220.00,Low Stock,2026-09-28
+PROD-1008,Edge Processing Unit,Hardware,APAC-East,24,18,110.00,In Stock,2026-09-27
+PROD-1009,Unified Telemetry Agent,Software,Europe-West,45,22,65.00,In Stock,2026-09-28
+PROD-1010,High-Speed Optical Switch,Hardware,Central-US,4,8,320.00,Critical,2026-09-26

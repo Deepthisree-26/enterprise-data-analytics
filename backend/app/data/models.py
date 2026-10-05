@@ -17,3 +17,16 @@ class DataRecord(Base):
     customer_role = Column(String, nullable=False)
     # Timestamp for when the record was inserted
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+# Re-export department models for centralized access and table registration
+from app.data.department_models import (
+    SalesTransaction,
+    Customer,
+    Product,
+    InventoryItem,
+    FinanceTransaction,
+    MarketingCampaign,
+    Employee,
+    UploadHistory,
+)
+

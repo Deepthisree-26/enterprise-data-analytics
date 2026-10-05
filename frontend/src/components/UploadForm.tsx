@@ -122,6 +122,19 @@ const UploadForm: React.FC<Props> = ({ onUploadSuccess }) => {
           )}
         </button>
       </form>
+
+      <div className="mt-4 pt-3.5 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+        <span className="text-slate-400">
+          Need to upload and validate <b>Customers</b>, <b>Inventory</b>, <b>Finance</b>, <b>Marketing</b>, or <b>HR</b> datasets?
+        </span>
+        <a
+          href="/analyst/data-ingestion"
+          className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center space-x-1 transition"
+        >
+          <span>Launch Enterprise Ingestion Center</span>
+          <span>→</span>
+        </a>
+      </div>
     </div>
   );
 };
